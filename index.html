@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Crazy Google Effects – Coding Site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f0f0f;
+      color: #ffffff;
+    }
+
+    header {
+      padding: 20px;
+      text-align: center;
+      background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+      color: black;
+    }
+
+    section {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #00ffcc;
+    }
+
+    pre {
+      background: #1e1e1e;
+      padding: 15px;
+      border-radius: 10px;
+      overflow-x: auto;
+    }
+
+    code {
+      color: #7CFC00;
+      font-size: 14px;
+    }
+
+    .note {
+      background: #222;
+      border-left: 4px solid #ff00ff;
+      padding: 10px;
+      margin: 15px 0;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🌈 Crazy Google Effects – Coding Website</h1>
+  <p>JavaScript + HTML tricks explained</p>
+</header>
+
+<section>
+  <h2>1️⃣ Rainbow Google Background (JavaScript)</h2>
+  <p>This JavaScript code changes Google’s background into a rainbow.</p>
+
+  <pre><code>// Paste this into the browser console on google.com
+let colors = ['red','orange','yellow','green','blue','indigo','violet'];
+let i = 0;
+
+setInterval(() => {
+  document.body.style.backgroundColor = colors[i];
+  i = (i + 1) % colors.length;
+}, 300);
+</code></pre>
+
+  <div class="note">⚠️ This only works on YOUR browser. It does not hack or change Google for everyone.</div>
+</section>
+
+<section>
+  <h2>2️⃣ Rainbow Google Logo</h2>
+  <p>This makes the Google logo spin and glow.</p>
+
+  <pre><code>// Run on google.com in DevTools console
+const logo = document.querySelector('img');
+logo.style.transition = 'all 1s';
+
+setInterval(() => {
+  logo.style.transform = `rotate(${Math.random()*360}deg)`;
+  logo.style.filter = `hue-rotate(${Math.random()*360}deg)`;
+}, 800);
+</code></pre>
+</section>
+
+<section>
+  <h2>3️⃣ Image Uploader (HTML + JavaScript)</h2>
+  <p>This is how websites let users upload and preview images.</p>
+
+  <pre><code>&lt;input type="file" accept="image/*" onchange="preview(event)"&gt;
+&lt;img id="img"&gt;
+
+&lt;script&gt;
+function preview(event) {
+  document.getElementById('img').src = URL.createObjectURL(event.target.files[0]);
+}
+&lt;/script&gt;
+</code></pre>
+</section>
+
+<section>
+  <h2>4️⃣ Fake Google Search Button</h2>
+  <p>This shows how a search button works.</p>
+
+  <pre><code>&lt;input id="q" placeholder="Search"&gt;
+&lt;button onclick="search()"&gt;Search&lt;/button&gt;
+
+&lt;script&gt;
+function search() {
+  let query = document.getElementById('q').value;
+  alert('You searched for: ' + query);
+}
+&lt;/script&gt;
+</code></pre>
+</section>
+
+<section>
+  <h2>5️⃣ How This Becomes a .com Website</h2>
+  <pre><code>1. Put this file on GitHub
+2. Enable GitHub Pages
+3. Buy a domain (example.com)
+4. Connect domain to GitHub Pages
+</code></pre>
+
+  <div class="note">💡 You cannot get a .com for free. Domains cost money.</div>
+</section>
+
+</body>
+</html>
